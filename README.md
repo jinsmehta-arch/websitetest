@@ -16,9 +16,11 @@ The live entry file is:
 ## Project Files
 
 - `index.html` - GitHub Pages entry point
+- `AGENTS.md` - project coding and brand instructions
 - `reena-kotecha-website.html` - source HTML copy
 - `build/index.html` - build output copy
-- `reena-kotecha-logo-mark-transparent.png` - logo asset used by the site
+- `images/` - optimized image assets used by the root site
+- `build/images/` - optimized image assets used by the build copy
 
 ## Local Preview
 
