@@ -1935,20 +1935,21 @@
 
     .portland-trust {
       background:
-        linear-gradient(135deg, #2F2F2F 0%, #D8CCC4 58%, #C89B8B 100%);
-      color: rgba(255, 248, 244, 0.88);
+        linear-gradient(180deg, #FAF7F4 0%, #E7D7C9 100%);
+      border-block: 1px solid rgba(200, 155, 139, 0.2);
+      color: var(--ink);
     }
 
     .portland-trust .section-head h2,
     .portland-trust h3 {
-      color: #FAF7F4;
+      color: var(--deep);
     }
 
     .portland-trust .section-head p,
     .portland-trust .portland-intro,
     .portland-trust li,
     .portland-trust small {
-      color: rgba(255, 248, 244, 0.74);
+      color: var(--muted);
     }
 
     .portland-grid {
@@ -1959,15 +1960,15 @@
 
     .portland-card {
       padding: 24px;
-      border: 1px solid rgba(200, 155, 139, 0.34);
-      background: rgba(255, 248, 244, 0.07);
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.12);
+      border: 1px solid rgba(200, 155, 139, 0.28);
+      background: rgba(255, 255, 255, 0.82);
+      box-shadow: 0 18px 44px rgba(47, 47, 47, 0.075);
     }
 
     .portland-card strong {
       display: block;
       margin-bottom: 8px;
-      color: #E7D7C9;
+      color: #C89B8B;
       font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
       font-weight: 800;
@@ -1980,7 +1981,7 @@
     }
 
     .portland-card p {
-      color: rgba(255, 248, 244, 0.74);
+      color: var(--muted);
     }
 
     .portland-card ul {
@@ -2000,13 +2001,13 @@
     }
 
     .portland-source a {
-      color: #E7D7C9;
+      color: #C89B8B;
       font-weight: 800;
       text-decoration: none;
     }
 
     .portland-source a:hover {
-      color: #FAF7F4;
+      color: #2F2F2F;
     }
 
     .contact-card,
@@ -2191,56 +2192,6 @@
         <div class="metric"><strong>5/5</strong><span>Doctify rating from 11 reviews</span></div>
         <div class="metric"><strong>Maternal &amp; Fetal</strong><span>Medicine and obstetric expertise</span></div>
         <div class="metric"><strong>Twin Pregnancy</strong><span>Multiple birth care expertise</span></div>
-      </div>
-    </section>
-
-    <section class="portland-trust" aria-label="The Portland Hospital maternity care">
-      <div class="section-head">
-        <div>
-          <p class="eyebrow">Delivering care at The Portland Hospital</p>
-          <h2>Consultant-led private maternity care with hospital infrastructure around you.</h2>
-        </div>
-        <p>Dr Reena Kotecha sees private maternity patients at The Portland Hospital, part of HCA Healthcare UK, where consultant-led care is supported by maternity teams, specialist services and neonatal expertise on site.</p>
-      </div>
-      <div class="portland-grid">
-        <article class="portland-card">
-          <strong>Consultant-led care</strong>
-          <h3>Named specialist oversight</h3>
-          <p>The Portland promotes consultant-led delivery for patients who want experienced obstetric oversight, including higher-risk pregnancies or planned caesarean birth.</p>
-        </article>
-        <article class="portland-card">
-          <strong>Safety and readiness</strong>
-          <h3>Prepared for complex births</h3>
-          <p>HCA describes maternity units equipped for straightforward and complex births, with on-site consultants, anaesthetists and neonatal teams available for complications.</p>
-        </article>
-        <article class="portland-card">
-          <strong>NICU availability</strong>
-          <h3>Neonatal care on site</h3>
-          <p>The Portland Hospital includes a private on-site neonatal intensive care unit, with consultants, neonatologists and neonatal nurses for babies needing extra care.</p>
-        </article>
-        <article class="portland-card">
-          <strong>24/7 support</strong>
-          <h3>Maternity teams around the clock</h3>
-          <p>The Portland highlights 24/7 support from dedicated maternity teams, including specialist advice for patients under midwife-led or consultant-led pathways.</p>
-        </article>
-        <article class="portland-card">
-          <strong>Hospital infrastructure</strong>
-          <h3>Advanced facilities when needed</h3>
-          <p>HCA lists an adult high-dependency unit, special care baby unit and emergency theatre on the labour ward as part of its maternity safety infrastructure.</p>
-        </article>
-        <article class="portland-card">
-          <strong>Specialists under one roof</strong>
-          <h3>Connected maternity services</h3>
-          <p>Pregnancy scans, physiotherapy, newborn checks, postnatal care, breastfeeding support and onward referrals sit within the wider HCA UK specialist network.</p>
-        </article>
-      </div>
-      <div class="portland-source">
-        <small>Hospital details are summarised from HCA Healthcare UK maternity information and Dr Kotecha's HCA consultant profile.</small>
-        <div>
-          <a href="https://www.hcahealthcare.co.uk/services/departments/maternity" target="_blank" rel="noopener noreferrer">View The Portland maternity services</a>
-          <span aria-hidden="true"> · </span>
-          <a href="https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/reena-kotecha" target="_blank" rel="noopener noreferrer">View HCA consultant profile</a>
-        </div>
       </div>
     </section>
 
@@ -2464,6 +2415,56 @@
         </article>
       </div>
       <p class="schema-note">SEO note: convert each service and blog topic into its own URL when moving from this prototype into production.</p>
+    </section>
+
+    <section class="portland-trust" aria-label="The Portland Hospital maternity care">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Delivering care at The Portland Hospital</p>
+          <h2>Consultant-led private maternity care with hospital infrastructure around you.</h2>
+        </div>
+        <p>Dr Reena Kotecha sees private maternity patients at The Portland Hospital, part of HCA Healthcare UK, where consultant-led care is supported by maternity teams, specialist services and neonatal expertise on site.</p>
+      </div>
+      <div class="portland-grid">
+        <article class="portland-card">
+          <strong>Consultant-led care</strong>
+          <h3>Named specialist oversight</h3>
+          <p>The Portland promotes consultant-led delivery for patients who want experienced obstetric oversight, including higher-risk pregnancies or planned caesarean birth.</p>
+        </article>
+        <article class="portland-card">
+          <strong>Safety and readiness</strong>
+          <h3>Prepared for complex births</h3>
+          <p>HCA describes maternity units equipped for straightforward and complex births, with on-site consultants, anaesthetists and neonatal teams available for complications.</p>
+        </article>
+        <article class="portland-card">
+          <strong>NICU availability</strong>
+          <h3>Neonatal care on site</h3>
+          <p>The Portland Hospital includes a private on-site neonatal intensive care unit, with consultants, neonatologists and neonatal nurses for babies needing extra care.</p>
+        </article>
+        <article class="portland-card">
+          <strong>24/7 support</strong>
+          <h3>Maternity teams around the clock</h3>
+          <p>The Portland highlights 24/7 support from dedicated maternity teams, including specialist advice for patients under midwife-led or consultant-led pathways.</p>
+        </article>
+        <article class="portland-card">
+          <strong>Hospital infrastructure</strong>
+          <h3>Advanced facilities when needed</h3>
+          <p>HCA lists an adult high-dependency unit, special care baby unit and emergency theatre on the labour ward as part of its maternity safety infrastructure.</p>
+        </article>
+        <article class="portland-card">
+          <strong>Specialists under one roof</strong>
+          <h3>Connected maternity services</h3>
+          <p>Pregnancy scans, physiotherapy, newborn checks, postnatal care, breastfeeding support and onward referrals sit within the wider HCA UK specialist network.</p>
+        </article>
+      </div>
+      <div class="portland-source">
+        <small>Hospital details are summarised from HCA Healthcare UK maternity information and Dr Kotecha's HCA consultant profile.</small>
+        <div>
+          <a href="https://www.hcahealthcare.co.uk/services/departments/maternity" target="_blank" rel="noopener noreferrer">View The Portland maternity services</a>
+          <span aria-hidden="true"> · </span>
+          <a href="https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/reena-kotecha" target="_blank" rel="noopener noreferrer">View HCA consultant profile</a>
+        </div>
+      </div>
     </section>
 
     <section id="contact">
