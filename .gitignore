@@ -1,0 +1,5 @@
+.DS_Store
+.vscode/
+codex-cli-training.html
+build/README.md
+build/src.html

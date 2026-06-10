@@ -1948,6 +1948,48 @@
       border-color: rgba(200, 155, 139, 0.45);
     }
 
+    .socials svg {
+      width: 20px;
+      height: 20px;
+      display: block;
+      fill: currentColor;
+    }
+
+    .socials a[aria-label="Instagram"] {
+      background: linear-gradient(135deg, #f58529 0%, #dd2a7b 48%, #8134af 100%);
+      border-color: transparent;
+      color: #ffffff;
+    }
+
+    .socials a[aria-label="YouTube"] {
+      background: #ff0000;
+      border-color: #ff0000;
+      color: #ffffff;
+    }
+
+    .socials a[aria-label="LinkedIn"] {
+      background: #0a66c2;
+      border-color: #0a66c2;
+      color: #ffffff;
+    }
+
+    .socials a[aria-label="Facebook"] {
+      background: #1877f2;
+      border-color: #1877f2;
+      color: #ffffff;
+    }
+
+    .socials a[aria-label="TikTok"] {
+      background: #111111;
+      border-color: #111111;
+      color: #ffffff;
+    }
+
+    .socials a:hover {
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.18);
+      transform: translateY(-1px);
+    }
+
     .rating-stars {
       color: var(--rose);
     }
@@ -2263,18 +2305,20 @@
         <p>Send a private obstetric enquiry for pregnancy care, complex antenatal care, twin pregnancy support, fetal medicine or birth planning. Appointments are coordinated through ObGyn Matters.</p>
       </div>
       <div class="contact-grid">
-        <form id="enquiry-form">
+        <form id="ContactForm" method="post" action="https://www.obgynmatters.co.uk/contact#ContactForm" accept-charset="UTF-8">
+          <input type="hidden" name="form_type" value="contact">
+          <input type="hidden" name="utf8" value="✓">
           <label>Full name
-            <input name="name" autocomplete="name" required>
+            <input id="ContactForm-name" name="contact[Name]" autocomplete="name" placeholder="Name" required>
           </label>
           <label>Email address
-            <input type="email" name="email" autocomplete="email" required>
+            <input id="ContactForm-email" type="email" name="contact[email]" autocomplete="email" spellcheck="false" autocapitalize="off" placeholder="Email" required>
           </label>
           <label>Phone number
-            <input type="tel" name="phone" autocomplete="tel">
+            <input id="ContactForm-phone" type="tel" name="contact[Phone number]" autocomplete="tel" pattern="[0-9\\-]*" placeholder="Phone number">
           </label>
           <label>Reason for enquiry
-            <select name="service" required>
+            <select name="contact[Reason for enquiry]" required>
               <option value="">Select a service</option>
               <option>Private maternity care</option>
               <option>Complex antenatal care</option>
@@ -2284,10 +2328,10 @@
               <option>Intrapartum care or birth planning</option>
             </select>
           </label>
-          <label>Message
-            <textarea name="message" placeholder="Please do not include urgent medical information. Call the clinic for urgent clinical concerns."></textarea>
+          <label>Comment
+            <textarea id="ContactForm-body" name="contact[Comment]" rows="10" placeholder="Comment"></textarea>
           </label>
-          <button class="button" type="submit">Send Enquiry</button>
+          <button class="button" type="submit">Send</button>
           <p id="form-status" aria-live="polite"></p>
         </form>
         <aside class="contact-card">
@@ -2297,11 +2341,31 @@
           <a href="mailto:info@obgynmatters.co.uk">info@obgynmatters.co.uk</a>
           <a href="https://www.obgynmatters.co.uk/pages/dr-reena-kotecha">Book via ObGyn Matters</a>
           <div class="socials" aria-label="Clinic social links">
-            <a href="https://www.instagram.com/obgynmatters/?hl=en" aria-label="Instagram">IG</a>
-            <a href="https://www.youtube.com/@obgynmatters" aria-label="YouTube">YT</a>
-            <a href="https://www.linkedin.com/" aria-label="LinkedIn">IN</a>
-            <a href="https://www.facebook.com/p/ObGyn-Matters-London-100064046743912/" aria-label="Facebook">FB</a>
-            <a href="https://www.tiktok.com/" aria-label="TikTok">TT</a>
+            <a href="https://www.instagram.com/obgynmatters/?hl=en" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2Zm0 2A3.76 3.76 0 0 0 4 7.75v8.5A3.76 3.76 0 0 0 7.75 20h8.5A3.76 3.76 0 0 0 20 16.25v-8.5A3.76 3.76 0 0 0 16.25 4h-8.5ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm5.25-2.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2Z"/>
+              </svg>
+            </a>
+            <a href="https://www.youtube.com/@obgynmatters" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31.4 31.4 0 0 0 0 12a31.4 31.4 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31.4 31.4 0 0 0 24 12a31.4 31.4 0 0 0-.5-5.8ZM9.6 15.6V8.4l6.3 3.6-6.3 3.6Z"/>
+              </svg>
+            </a>
+            <a href="https://uk.linkedin.com/in/dr-reena-kotecha" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.45 20.45h-3.56v-5.58c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.68H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12Zm1.78 13.02H3.56V9h3.56v11.45ZM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.21 0 22.23 0Z"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/p/ObGyn-Matters-London-100064046743912/" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.03 1.79-4.7 4.53-4.7 1.31 0 2.68.24 2.68.24v2.96h-1.51c-1.49 0-1.96.93-1.96 1.89v2.27h3.33l-.53 3.49h-2.8V24C19.61 23.1 24 18.1 24 12.07Z"/>
+              </svg>
+            </a>
+            <a href="https://www.tiktok.com/@obgynmatters" aria-label="TikTok" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M17.15 2c.36 3.07 2.08 4.9 5.08 5.09v3.45a8.6 8.6 0 0 1-5.02-1.55v6.54c0 5.57-6.06 7.31-9.72 3.31-2.36-2.58-.91-7.1 2.87-8.02a8.7 8.7 0 0 1 2.17-.13v3.63c-.42-.05-.84-.04-1.25.06-1.8.43-2.4 2.5-1.3 3.7 1.58 1.71 3.73.45 3.73-2.15V2h3.44Z"/>
+              </svg>
+            </a>
           </div>
         </aside>
       </div>
@@ -2323,11 +2387,14 @@
       });
     });
 
-    document.querySelector("#enquiry-form").addEventListener("submit", (event) => {
-      event.preventDefault();
-      document.querySelector("#form-status").textContent = "Thank you. In production, this enquiry would be sent securely to the clinic team.";
-      event.currentTarget.reset();
-    });
+    const localDemoForm = document.querySelector("#enquiry-form");
+    if (localDemoForm) {
+      localDemoForm.addEventListener("submit", (event) => {
+        event.preventDefault();
+        document.querySelector("#form-status").textContent = "Thank you. In production, this enquiry would be sent securely to the clinic team.";
+        event.currentTarget.reset();
+      });
+    }
   </script>
 </body>
 </html>
