@@ -4,11 +4,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Dr Reena Kotecha | Private Obstetrician London</title>
-  <meta name="description" content="Private obstetrician London, Dr Reena Kotecha, offers consultant-led maternity care, private pregnancy care, twin pregnancy expertise, fetal medicine and private C-section planning in London.">
-  <meta name="keywords" content="private obstetrician London, consultant-led maternity care, private pregnancy care, private C-section London, consultant obstetrician Portland Hospital, twin pregnancy specialist London, complex antenatal care London, fetal medicine London, intrapartum care London, private maternity care London, obstetric ultrasound London">
+  <meta name="description" content="Private obstetric care in London with Dr Reena Kotecha, offering consultant-led maternity care, complex antenatal care, twin pregnancy expertise, fetal medicine and caesarean birth planning.">
+  <link rel="canonical" href="https://jinsmehta-arch.github.io/websitetest/">
   <meta property="og:title" content="Dr Reena Kotecha | Private Obstetrician in London">
-  <meta property="og:description" content="Consultant-led maternity care, private pregnancy care and private C-section planning in London with Dr Reena Kotecha.">
+  <meta property="og:description" content="Consultant-led maternity care, private pregnancy care and caesarean birth planning in London with Dr Reena Kotecha.">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jinsmehta-arch.github.io/websitetest/">
+  <meta property="og:image" content="https://jinsmehta-arch.github.io/websitetest/images/dr-reena-kotecha-consultant-obstetrician.jpg">
+  <meta property="og:locale" content="en_GB">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
@@ -471,6 +474,19 @@
 
     .post {
       overflow: hidden;
+      display: block;
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .post:hover h3,
+    .post:focus-visible h3 {
+      color: var(--rose);
+    }
+
+    .post:focus-visible {
+      outline: 2px solid rgba(200, 155, 139, 0.7);
+      outline-offset: 4px;
     }
 
     .post img {
@@ -1669,20 +1685,26 @@
         linear-gradient(180deg, #ffffff 0%, #FAF7F4 42%, #ffffff 100%);
       color: var(--ink);
       font-weight: 400;
+      line-height: 1.65;
     }
 
     h1,
-    h2,
-    h3 {
+    h2 {
       font-family: "Playfair Display", Georgia, "Times New Roman", serif;
       color: var(--deep);
       letter-spacing: 0;
     }
 
+    h3 {
+      font-family: "Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--deep);
+      letter-spacing: 0;
+    }
+
     h1 {
-      font-size: clamp(50px, 6.4vw, 90px);
+      font-size: clamp(42px, 5.7vw, 78px);
       font-weight: 600;
-      line-height: 1.02;
+      line-height: 1.06;
     }
 
     h2 {
@@ -1692,8 +1714,9 @@
     }
 
     h3 {
-      font-size: 20px;
+      font-size: 18px;
       font-weight: 600;
+      line-height: 1.22;
     }
 
     .topline {
@@ -1729,8 +1752,8 @@
       font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
       font-size: 13px;
       font-weight: 600;
-      letter-spacing: 0.09em;
-      text-transform: uppercase;
+      letter-spacing: 0;
+      text-transform: none;
     }
 
     nav a {
@@ -1750,10 +1773,10 @@
       color: #ffffff;
       box-shadow: 0 14px 28px rgba(200, 155, 139, 0.22);
       font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
-      font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
     }
 
     .button:hover,
@@ -1762,6 +1785,79 @@
       border-color: #C89B8B;
       box-shadow: 0 18px 36px rgba(200, 155, 139, 0.28);
       transform: translateY(-1px);
+    }
+
+    .nav-cta {
+      position: relative;
+      isolation: isolate;
+      background: #C89B8B;
+      border-color: #C89B8B;
+      color: #ffffff;
+      animation: ctaPulse 4.8s ease-in-out infinite;
+    }
+
+    .nav-cta:hover,
+    .nav-cta:focus-visible {
+      background: #C89B8B;
+      border-color: #C89B8B;
+      color: #ffffff;
+    }
+
+    .nav-cta::after {
+      content: "";
+      position: absolute;
+      inset: -5px;
+      z-index: -1;
+      border-radius: inherit;
+      border: 1px solid rgba(200, 155, 139, 0.42);
+      opacity: 0;
+      transform: scale(0.94);
+      animation: ctaHalo 4.8s ease-in-out infinite;
+    }
+
+    @keyframes ctaPulse {
+      0%,
+      72%,
+      100% {
+        box-shadow: 0 14px 28px rgba(200, 155, 139, 0.22);
+        transform: translateY(0) scale(1);
+      }
+
+      78% {
+        box-shadow: 0 18px 34px rgba(200, 155, 139, 0.34);
+        transform: translateY(-1px) scale(1.018);
+      }
+
+      84% {
+        box-shadow: 0 14px 28px rgba(200, 155, 139, 0.22);
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes ctaHalo {
+      0%,
+      72%,
+      100% {
+        opacity: 0;
+        transform: scale(0.94);
+      }
+
+      78% {
+        opacity: 0.85;
+        transform: scale(1.08);
+      }
+
+      90% {
+        opacity: 0;
+        transform: scale(1.16);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .nav-cta,
+      .nav-cta::after {
+        animation: none;
+      }
     }
 
     .button.secondary,
@@ -1801,14 +1897,15 @@
     .lead {
       color: #6d6662;
       font-size: clamp(18px, 1.8vw, 23px);
+      line-height: 1.58;
     }
 
     .eyebrow {
       color: var(--rose);
       font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
-      font-weight: 700;
-      letter-spacing: 0.16em;
+      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
@@ -1826,6 +1923,7 @@
       color: var(--deep);
       font-family: "Playfair Display", Georgia, "Times New Roman", serif;
       font-weight: 600;
+      font-variant-numeric: tabular-nums;
     }
 
     .metric span,
@@ -1851,6 +1949,9 @@
 
     .panel,
     .service,
+    .patient-card,
+    .faq-item,
+    .practical-item,
     .video-card,
     .post,
     form,
@@ -1864,10 +1965,65 @@
 
     .panel,
     .service,
+    .patient-card,
+    .faq-item,
+    .practical-item,
     .video-card,
     .post div,
     form {
       background: rgba(255, 255, 255, 0.86);
+    }
+
+    .patient-grid,
+    .faq-grid,
+    .practical-grid {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .patient-card,
+    .faq-item,
+    .practical-item {
+      padding: 24px;
+      border: 1px solid rgba(200, 155, 139, 0.28);
+      box-shadow: 0 18px 44px rgba(47, 47, 47, 0.075);
+    }
+
+    .patient-card strong,
+    .practical-item strong {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--rose);
+      font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+    }
+
+    .patient-card h3,
+    .faq-item h3,
+    .practical-item h3 {
+      margin-bottom: 8px;
+    }
+
+    .patient-card p,
+    .faq-item p,
+    .practical-item p {
+      color: var(--muted);
+    }
+
+    .patient-note {
+      max-width: 1180px;
+      margin: 18px auto 0;
+      padding: 18px 20px;
+      border-left: 3px solid var(--rose);
+      background: rgba(255, 255, 255, 0.74);
+      color: var(--muted);
+      font-weight: 600;
     }
 
     .credential {
@@ -1971,8 +2127,8 @@
       color: #C89B8B;
       font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
       font-size: 12px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+      font-weight: 600;
+      letter-spacing: 0.07em;
       text-transform: uppercase;
     }
 
@@ -2106,11 +2262,153 @@
       color: var(--rose);
     }
 
+    /* Final spacing rhythm for calm, conversion-focused browsing. */
+    section {
+      padding: clamp(64px, 7vw, 104px) clamp(20px, 5vw, 72px);
+    }
+
+    .hero {
+      min-height: auto;
+      padding-top: clamp(54px, 6vw, 86px);
+      padding-bottom: clamp(38px, 5vw, 68px);
+      row-gap: clamp(26px, 4vw, 46px);
+    }
+
+    .hero-copy {
+      padding-bottom: clamp(12px, 2vw, 28px);
+    }
+
+    .hero-actions,
+    .actions {
+      margin-top: 24px;
+      gap: 12px;
+    }
+
+    .hero .schema-note {
+      margin: 18px 0 0;
+      max-width: 720px;
+    }
+
+    .hero-strip {
+      margin-top: clamp(24px, 4vw, 42px);
+    }
+
+    .section-head {
+      margin-bottom: clamp(28px, 4vw, 44px);
+      gap: clamp(18px, 3vw, 36px);
+    }
+
+    .section-head + .patient-grid,
+    .section-head + .faq-grid,
+    .section-head + .practical-grid,
+    .section-head + .services,
+    .section-head + .blog-grid,
+    .section-head + .video-layout,
+    .section-head + .reviews-summary,
+    .section-head + .contact-grid {
+      margin-top: 0;
+    }
+
+    .services + .section-head {
+      margin-top: clamp(46px, 6vw, 76px);
+      padding-top: clamp(22px, 3vw, 34px);
+      border-top: 1px solid rgba(200, 155, 139, 0.2);
+    }
+
+    .patient-grid,
+    .faq-grid,
+    .practical-grid,
+    .services,
+    .blog-grid,
+    .reviews-grid {
+      gap: clamp(18px, 2.2vw, 26px);
+    }
+
+    .about-grid,
+    .contact-grid,
+    .video-layout,
+    .reviews-summary {
+      gap: clamp(24px, 3.6vw, 42px);
+    }
+
+    .panel,
+    .service,
+    .patient-card,
+    .faq-item,
+    .practical-item,
+    .review-card,
+    .reviews-proof,
+    .rating-panel {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    .service,
+    .patient-card,
+    .faq-item,
+    .practical-item,
+    .review-card {
+      min-height: 100%;
+    }
+
+    .credential {
+      padding: 16px 18px;
+    }
+
+    .credentials {
+      gap: 14px;
+      margin: 24px 0 0;
+    }
+
+    .panel ul,
+    .service ul {
+      margin-top: 18px;
+    }
+
+    .panel li + li,
+    .service li + li {
+      margin-top: 7px;
+    }
+
+    .patient-card p,
+    .faq-item p,
+    .practical-item p,
+    .service p,
+    .post p,
+    .review-card blockquote {
+      margin-top: 8px;
+    }
+
+    .portland-source {
+      margin-top: clamp(24px, 3vw, 34px);
+    }
+
+    form {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
+    form label + label,
+    form label + button,
+    form button + p {
+      margin-top: 16px;
+    }
+
+    input,
+    select,
+    textarea {
+      margin-top: 7px;
+    }
+
+    .contact-card {
+      padding: clamp(24px, 3vw, 34px);
+    }
+
     @media (max-width: 980px) {
       .hero {
         background:
           radial-gradient(circle at 18% 12%, rgba(200, 155, 139, 0.14), transparent 28%),
           linear-gradient(135deg, #ffffff 0%, #FAF7F4 55%, #E7D7C9 100%);
+        padding-top: 42px;
+        padding-bottom: 42px;
       }
 
       .portland-grid {
@@ -2121,34 +2419,177 @@
         align-items: flex-start;
         flex-direction: column;
       }
+
+      .patient-grid,
+      .faq-grid,
+      .practical-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 52px 20px;
+      }
+
+      .section-head {
+        margin-bottom: 26px;
+      }
+
+      .hero-actions,
+      .actions {
+        gap: 10px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+
+    @media (max-width: 640px) {
+      section {
+        padding: 44px 18px;
+      }
+
+      .panel,
+      .service,
+      .patient-card,
+      .faq-item,
+      .practical-item,
+      .review-card,
+      .reviews-proof,
+      .rating-panel,
+      form,
+      .contact-card {
+        padding: 22px;
+      }
+
+      .hero-strip {
+        margin-top: 22px;
+      }
     }
   </style>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "Dr Reena Kotecha",
-      "medicalSpecialty": ["Obstetrics", "Maternal and Fetal Medicine"],
-      "description": "Private obstetrician in London offering consultant-led maternity care, private pregnancy care, complex antenatal care, twin pregnancy expertise, fetal medicine, obstetric ultrasound and private C-section planning.",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "212 Great Portland Street",
-        "addressLocality": "London",
-        "postalCode": "W1W 5QN",
-        "addressCountry": "GB"
-      },
-      "telephone": "+442079351423",
-      "hospitalAffiliation": "The Portland Hospital",
-      "identifier": "General Medical Council 6078131",
-      "knowsAbout": ["Private obstetrician London", "Consultant-led maternity care", "Private pregnancy care", "Private C-section London", "Complex antenatal care", "Intrapartum care", "Twin pregnancies", "Fetal medicine", "Obstetric medicine", "Obstetric ultrasound", "NIPT", "Caesarean section", "Assisted vaginal delivery"],
-      "knowsLanguage": "English",
-      "url": "https://www.obgynmatters.co.uk/pages/dr-reena-kotecha"
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://jinsmehta-arch.github.io/websitetest/#website",
+          "name": "Dr Reena Kotecha Private Obstetric Care",
+          "url": "https://jinsmehta-arch.github.io/websitetest/",
+          "inLanguage": "en-GB"
+        },
+        {
+          "@type": "Physician",
+          "@id": "https://jinsmehta-arch.github.io/websitetest/#physician",
+          "name": "Dr Reena Kotecha",
+          "image": "https://jinsmehta-arch.github.io/websitetest/images/dr-reena-kotecha-consultant-obstetrician.jpg",
+          "medicalSpecialty": ["Obstetrics", "Maternal and Fetal Medicine"],
+          "description": "Private obstetrician in London offering consultant-led maternity care, private pregnancy care, complex antenatal care, twin pregnancy expertise, fetal medicine, obstetric ultrasound and caesarean birth planning.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "212 Great Portland Street",
+            "addressLocality": "London",
+            "postalCode": "W1W 5QN",
+            "addressCountry": "GB"
+          },
+          "telephone": "+442079351423",
+          "hospitalAffiliation": "The Portland Hospital",
+          "identifier": "General Medical Council 6078131",
+          "knowsAbout": ["Private obstetrician London", "Consultant-led maternity care", "Private pregnancy care", "Private C-section London", "Complex antenatal care", "Care during labour and birth", "Twin pregnancies", "Fetal medicine", "Obstetric medicine", "Obstetric ultrasound", "NIPT", "Caesarean section", "Assisted vaginal delivery"],
+          "knowsLanguage": "English",
+          "areaServed": ["London", "Harley Street", "Great Portland Street"],
+          "url": "https://jinsmehta-arch.github.io/websitetest/",
+          "sameAs": [
+            "https://www.obgynmatters.co.uk/pages/dr-reena-kotecha",
+            "https://www.hcahealthcare.co.uk/finder/stepconsultantprofile/reena-kotecha",
+            "https://www.doctify.com/uk/specialist/reena-kotecha",
+            "https://www.instagram.com/obgynmatters/?hl=en",
+            "https://www.youtube.com/@obgynmatters",
+            "https://www.facebook.com/p/ObGyn-Matters-London-100064046743912/"
+          ]
+        },
+        {
+          "@type": "MedicalBusiness",
+          "@id": "https://jinsmehta-arch.github.io/websitetest/#medicalbusiness",
+          "name": "Dr Reena Kotecha Private Obstetric Care",
+          "medicalSpecialty": "Obstetrics",
+          "url": "https://jinsmehta-arch.github.io/websitetest/",
+          "telephone": "+442079351423",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "212 Great Portland Street",
+            "addressLocality": "London",
+            "postalCode": "W1W 5QN",
+            "addressCountry": "GB"
+          },
+          "areaServed": ["London", "Harley Street", "Great Portland Street"],
+          "parentOrganization": {
+            "@type": "Organization",
+            "name": "ObGyn Matters",
+            "url": "https://www.obgynmatters.co.uk/"
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://jinsmehta-arch.github.io/websitetest/#faq",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can I see Dr Kotecha if I am already booked elsewhere?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can enquire about a consultation even if you already have NHS or private maternity care in place."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I transfer care later in pregnancy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Later enquiries can be discussed with the clinic team. The options will depend on gestation, clinical details and appointment availability."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I discuss a planned C-section?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can discuss caesarean birth, vaginal birth, assisted birth and how those options relate to your pregnancy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need a referral?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Many private maternity enquiries can be made directly. The clinic team can advise if any records or referral information would be helpful."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I book with a high-risk pregnancy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can enquire about complex antenatal care, previous complications, twin pregnancy, fetal medicine concerns or medical conditions in pregnancy."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What if I am worried between appointments?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The clinic can explain the appropriate contact route for non-urgent concerns and when to contact your maternity unit urgently."
+              }
+            }
+          ]
+        }
+      ]
     }
   </script>
 </head>
 <body>
   <div class="topline">
-    <span>Dr Reena Kotecha - Private obstetrician London for consultant-led maternity care at The Portland Hospital</span>
+    <span>Dr Reena Kotecha - Consultant-led private obstetric care at The Portland Hospital</span>
     <a href="tel:+442079351423" aria-label="Call Dr Reena Kotecha on 0207 935 1423">Call 0207 935 1423</a>
   </div>
 
@@ -2157,16 +2598,16 @@
       <a class="brand" href="#home" aria-label="Dr Reena Kotecha home">
         <span class="brand-mark">RK</span>
         <span>Dr Reena Kotecha <medium>Private Obstetric Care</medium></span>
-        <img class="rk-logo" src="images/reena-kotecha-logo-mark-transparent.png" alt="Reena Kotecha Consultant Obstetrician">
+        <img class="rk-logo" src="images/reena-kotecha-logo-mark-transparent.png" alt="Reena Kotecha consultant obstetrician logo">
       </a>
       <nav>
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#services">Services</a>
-        <a href="#blog">Blogs</a>
+        <a href="#blog">Patient Guides</a>
         <a href="#videos">Videos</a>
         <a href="#contact">Contact</a>
-        <a class="button" href="#contact">Free Meet and Greet</a>
+        <a class="button nav-cta" href="#contact">Free Meet and Greet</a>
       </nav>
     </div>
   </header>
@@ -2175,23 +2616,51 @@
     <section class="hero" aria-label="Private obstetric care hero">
       <div class="hero-copy">
         <p class="eyebrow">Private obstetrician London at The Portland Hospital</p>
-        <h1>Consultant-led maternity care for private pregnancy care in London.</h1>
-        <p class="lead">Dr Reena Kotecha provides holistic, patient-centred obstetric care, with specialist expertise in private pregnancy care, complex antenatal care, intrapartum care, twin pregnancies, fetal medicine and private C-section planning.</p>
+        <h1>Private obstetrician in London for calm, consultant-led pregnancy care.</h1>
+        <p class="lead">Dr Reena Kotecha provides holistic, patient-centred obstetric care, with specialist expertise in routine and complex antenatal care, care during labour and birth, twin pregnancies, fetal medicine and caesarean birth planning.</p>
         <div class="hero-actions">
           <a class="button" href="#contact">Book a Free Meet and Greet</a>
           <a class="button secondary" href="#about">Meet Your Consultant</a>
           <a class="button ghost" href="#videos">Watch Patient Education Videos</a>
         </div>
+        <p class="schema-note">A free meet and greet is a short introductory appointment to discuss your pregnancy, concerns and whether Dr Kotecha's care is right for you.</p>
       </div>
       <figure class="hero-media">
-        <img src="images/dr-reena-kotecha-consultant-obstetrician.jpg" alt="Dr Reena Kotecha">
+        <img src="images/dr-reena-kotecha-consultant-obstetrician.jpg" alt="Dr Reena Kotecha private obstetrician London">
         <figcaption class="media-credit">Dr Reena Kotecha, Consultant Obstetrician</figcaption>
       </figure>
       <div class="hero-strip" aria-label="Trust indicators">
         <div class="metric"><strong>22</strong><span>Years of clinical experience</span></div>
-        <div class="metric"><strong>5/5</strong><span>Doctify rating from 11 reviews</span></div>
-        <div class="metric"><strong>Maternal &amp; Fetal</strong><span>Medicine and obstetric expertise</span></div>
+        <div class="metric"><strong>5/5</strong><span>Doctify rating from verified patients</span></div>
+        <div class="metric"><strong>Obstetric &amp; Fetal</strong><span>Medicine and obstetric expertise</span></div>
         <div class="metric"><strong>Twin Pregnancy</strong><span>Multiple birth care expertise</span></div>
+      </div>
+    </section>
+
+    <section class="band" aria-label="What happens next">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">What happens next</p>
+          <h2>A clear route from enquiry to care plan.</h2>
+        </div>
+        <p>The first step is designed to be simple, calm and practical, especially if you are unsure what level of support you need.</p>
+      </div>
+      <div class="patient-grid">
+        <article class="patient-card">
+          <strong>Step 1</strong>
+          <h3>Send an enquiry</h3>
+          <p>Share where you are in pregnancy, what you would like help with and any concerns you already have.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Step 2</strong>
+          <h3>Clinic team contacts you</h3>
+          <p>The team will respond to discuss appointment availability and the most appropriate next step.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Step 3</strong>
+          <h3>Meet and plan</h3>
+          <p>Your introductory discussion can explore your pregnancy, preferences and whether consultant-led care is right for you.</p>
+        </article>
       </div>
     </section>
 
@@ -2201,25 +2670,25 @@
           <p class="eyebrow">Obstetric expertise</p>
           <h2>Specialist private pregnancy care for birth and fetal wellbeing.</h2>
         </div>
-        <p>Dr Kotecha combines consultant-level obstetric experience with a calm, compassionate approach, helping families feel listened to, supported, informed and safe.</p>
+        <p>Dr Kotecha combines consultant-level obstetric experience with a calm, compassionate approach, helping families feel listened to, supported, informed and reassured.</p>
       </div>
       <div class="about-grid">
         <article class="panel">
-          <p>Dr Reena Kotecha is a Consultant Obstetrician and Gynaecologist with 22 years of clinical experience. Her private obstetric practice includes appointments at The Portland Hospital in London, supporting patients searching for a private obstetrician London, consultant-led maternity care and private pregnancy care.</p>
-          <p>Her obstetric specialisms include routine and complex antenatal care, twin pregnancies, maternal and fetal medicine, obstetric medicine and sonography.</p>
+          <p>Dr Reena Kotecha is a Consultant Obstetrician and Gynaecologist with 22 years of clinical experience. Her private obstetric practice includes appointments at The Portland Hospital in London's Great Portland Street and Harley Street medical district for women seeking consultant-led maternity care and private pregnancy care.</p>
+          <p>Her obstetric specialisms include routine and complex antenatal care, twin pregnancies, fetal medicine and ultrasonography.</p>
           <p>Dr Kotecha's published HCA profile describes comprehensive maternity care with continuity, clear communication, informed decision making and individualised care planning throughout pregnancy.</p>
           <div class="credentials">
             <div class="credential"><strong>Qualifications</strong><span>MBBS, MRCOG, BSc</span></div>
-            <div class="credential"><strong>Subspecialities</strong><span>Maternal and fetal medicine, obstetrics, obstetric medicine and sonography</span></div>
-            <div class="credential"><strong>Pregnancy expertise</strong><span>Complex antenatal care, intrapartum care and twin pregnancies</span></div>
+            <div class="credential"><strong>Subspecialities</strong><span>Ultrasonography, fetal medicine, complex antenatal care, care during labour and birth, and twin pregnancies</span></div>
+            <div class="credential"><strong>Pregnancy expertise</strong><span>Tailored care for women with uncomplicated pregnancies, offering continuity, reassurance, and expert support throughout their pregnancy journey.</span></div>
             <div class="credential"><strong>Registration</strong><span>General Medical Council 6078131</span></div>
           </div>
           <ul>
-            <li>Private maternity care for routine pregnancy and pregnancies needing consultant input.</li>
+            <li>Private maternity care for uncomplicated pregnancy and pregnancies needing consultant input.</li>
             <li>Complex antenatal care, including high-risk pregnancies, gestational diabetes and pre-eclampsia.</li>
             <li>Twin pregnancy care, including multiple birth planning and closer surveillance.</li>
             <li>Fetal medicine, obstetric ultrasound, NIPT, fetal anomaly assessment and fetal echocardiography pathways.</li>
-            <li>Birth planning, including private C-section London discussions, caesarean section, assisted vaginal delivery and vaginal birth options.</li>
+            <li>Birth planning, including C-section discussions, assisted vaginal delivery and vaginal birth options.</li>
           </ul>
           <div class="actions">
             <a class="button" href="#contact">Book your free meet and greet</a>
@@ -2227,7 +2696,7 @@
           </div>
         </article>
         <aside class="portrait panel">
-          <img src="images/dr-reena-kotecha-profile-photo.jpg" alt="Dr Reena Kotecha profile photograph">
+          <img src="images/dr-reena-kotecha-profile-photo.jpg" alt="Dr Reena Kotecha consultant obstetrician profile photograph">
           <div class="caption">
             <h3>Consultant profile</h3>
             <p>Private maternity care with continuity, clear communication and informed decision making throughout pregnancy.</p>
@@ -2287,11 +2756,50 @@
         </article>
         <article class="service" id="birth-planning">
           <div>
-            <h3>Private C-Section London and Birth Planning</h3>
-            <p>Planning for labour and birth, including private C-section London appointments, caesarean section, assisted vaginal delivery, vaginal delivery and induction discussions.</p>
-            <ul><li>Birth preferences</li><li>Private C-section planning</li><li>Assisted or vaginal delivery discussion</li></ul>
+            <h3>Caesarean Birth and Birth Planning</h3>
+            <p>Planning for labour and birth, including caesarean section, assisted vaginal delivery, vaginal delivery and induction discussions.</p>
+            <ul><li>Birth preferences</li><li>C-section planning</li><li>Assisted or vaginal delivery discussion</li></ul>
           </div>
           <a href="#contact">Start birth planning</a>
+        </article>
+      </div>
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Is this care right for me?</p>
+          <h2>You do not need a complex pregnancy to ask for consultant-led care.</h2>
+        </div>
+        <p>Many patients choose private obstetric care because they value continuity, time for questions and a named consultant involved in planning their pregnancy and birth.</p>
+      </div>
+      <div class="patient-grid">
+        <article class="patient-card">
+          <strong>Continuity</strong>
+          <h3>I want consultant oversight</h3>
+          <p>You may want a familiar consultant involved in antenatal reviews, birth planning and decision-making.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Previous experience</strong>
+          <h3>I have had a difficult pregnancy before</h3>
+          <p>Previous complications, anxiety or a difficult birth can make early planning and extra reassurance helpful.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Twins</strong>
+          <h3>I am expecting twins</h3>
+          <p>Twin pregnancies usually need closer monitoring, clear discussion and careful planning for birth.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Birth choices</strong>
+          <h3>I am considering a planned C-section</h3>
+          <p>You can discuss caesarean section, vaginal birth, assisted birth and what may be most appropriate for your circumstances.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Reassurance</strong>
+          <h3>I feel anxious and want more support</h3>
+          <p>Some patients seek consultant-led care because they want more time to talk through concerns and understand their options.</p>
+        </article>
+        <article class="patient-card">
+          <strong>Clinical needs</strong>
+          <h3>I have been told I may be higher risk</h3>
+          <p>Medical conditions, fetal concerns or previous complications can benefit from coordinated consultant input.</p>
         </article>
       </div>
     </section>
@@ -2315,11 +2823,11 @@
           </div>
         </article>
         <div class="video-list" aria-label="Pregnancy education series">
-          <button class="video-card" data-title="Understanding NIPT Testing" data-description="Planned topic: what NIPT screens for, how results are interpreted and when further assessment may be recommended."><strong>Understanding NIPT Testing</strong><span>Planned education topic</span></button>
-          <button class="video-card" data-title="Managing Gestational Diabetes" data-description="Planned topic: diagnosis, monitoring, care coordination and what gestational diabetes can mean for birth planning."><strong>Managing Gestational Diabetes</strong><span>Planned high-risk pregnancy topic</span></button>
-          <button class="video-card" data-title="Twin Pregnancy Advice" data-description="Planned topic: what changes in a twin pregnancy, how monitoring is scheduled and which symptoms should prompt urgent review."><strong>Twin Pregnancy Advice</strong><span>Planned multiple pregnancy topic</span></button>
-          <button class="video-card" data-title="When to Call Your Obstetrician" data-description="Planned topic: red-flag guidance for reduced movements, bleeding, pain, headaches, swelling and early labour concerns."><strong>When to Call Your Obstetrician</strong><span>Planned short-form topic</span></button>
-          <button class="video-card" data-title="Birth Plans Explained" data-description="Planned topic: how to build a birth plan that is personal, realistic and clinically safe for your pregnancy."><strong>Birth Plans Explained</strong><span>Planned education topic</span></button>
+          <button class="video-card" data-title="Understanding NIPT Testing" data-description="A patient education topic covering what NIPT screens for, how results are interpreted and when further assessment may be recommended."><strong>Understanding NIPT Testing</strong><span>Patient education topic</span></button>
+          <button class="video-card" data-title="Managing Gestational Diabetes" data-description="A high-risk pregnancy topic covering diagnosis, monitoring, care coordination and what gestational diabetes can mean for birth planning."><strong>Managing Gestational Diabetes</strong><span>High-risk pregnancy topic</span></button>
+          <button class="video-card" data-title="Twin Pregnancy Advice" data-description="A multiple pregnancy topic covering what changes in a twin pregnancy, how monitoring is scheduled and which symptoms should prompt urgent review."><strong>Twin Pregnancy Advice</strong><span>Multiple pregnancy topic</span></button>
+          <button class="video-card" data-title="When to Call Your Obstetrician" data-description="A patient education topic covering red-flag symptoms such as reduced movements, bleeding, pain, headaches, swelling and early labour concerns."><strong>When to Call Your Obstetrician</strong><span>Patient education topic</span></button>
+          <button class="video-card" data-title="Birth Plans Explained" data-description="A patient education topic covering how to build a birth plan that is personal, realistic and clinically appropriate for your pregnancy."><strong>Birth Plans Explained</strong><span>Patient education topic</span></button>
         </div>
       </div>
     </section>
@@ -2330,17 +2838,17 @@
           <p class="eyebrow">Verified patient reviews</p>
           <h2>Rated 5/5 on Doctify by verified patients.</h2>
         </div>
-        <p>Doctify currently lists Dr Reena Kotecha with an overall 5 out of 5 rating from 11 verified patient reviews, with obstetric themes including pregnancy, private maternity, ultrasound, high-risk pregnancy, caesarean section and twin birth.</p>
+        <p>Dr Kotecha's Doctify profile lists an overall 5 out of 5 rating from verified patients, with obstetric themes including pregnancy, private maternity, ultrasound, high-risk pregnancy, caesarean section and twin birth.</p>
       </div>
       <div class="reviews-summary">
         <div class="rating-panel" aria-label="Doctify rating summary">
           <strong>5/5</strong>
-          <span>11 verified reviews on Doctify</span>
+          <span>Verified patients on Doctify</span>
           <div class="rating-stars" aria-hidden="true">★★★★★</div>
         </div>
         <div class="reviews-proof">
           <h3>What patients consistently mention</h3>
-          <p>Recent reviews highlight clear explanations, calm decision making, compassionate high-risk pregnancy care, twin pregnancy support, continuity through delivery and feeling safe, informed and reassured throughout pregnancy.</p>
+          <p>Patient feedback highlights clear explanations, calm decision making, compassionate high-risk pregnancy care, twin pregnancy support, continuity through delivery and feeling informed and reassured throughout pregnancy.</p>
           <div class="actions">
             <a class="button secondary" href="https://www.doctify.com/uk/specialist/reena-kotecha">Read all Doctify reviews</a>
           </div>
@@ -2349,32 +2857,32 @@
       <div class="reviews-grid">
         <article class="review-card">
           <div class="review-tags">Pregnancy · Private Maternity · Ultrasound</div>
-          <blockquote>“Dr. Kotecha is very professional, caring and knowledgeable and we felt in the best hands throughout.”</blockquote>
+          <blockquote>Patients describe professional, caring and knowledgeable support throughout pregnancy.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2026-04-25">25 Apr 2026</time></div>
         </article>
         <article class="review-card">
           <div class="review-tags">Pregnancy · High Risk Pregnancies · Ultrasound</div>
-          <blockquote>“She always took the time to explain things clearly, answer my questions, and make sure I felt heard.”</blockquote>
+          <blockquote>Patients value clear explanations, time for questions and feeling heard during appointments.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2026-02-19">19 Feb 2026</time></div>
         </article>
         <article class="review-card">
           <div class="review-tags">C-Section · Obstetrics · Pregnancy</div>
-          <blockquote>“The combination of clinical excellence, kindness, and emotional support made an enormous difference.”</blockquote>
+          <blockquote>Feedback often mentions clinical expertise alongside kindness and emotional support.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2026-01-13">13 Jan 2026</time></div>
         </article>
         <article class="review-card">
           <div class="review-tags">Pregnancy</div>
-          <blockquote>“Her compassion, expertise, and dedication made me feel completely safe throughout the entire process.”</blockquote>
+          <blockquote>Patients highlight compassion, expertise and dedication during their pregnancy journey.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2025-12-04">04 Dec 2025</time></div>
         </article>
         <article class="review-card">
           <div class="review-tags">High Risk Pregnancy · Caesarean Section · Pregnancy</div>
-          <blockquote>“Her calm demeanour, clinical skill, and swift decision-making helped us navigate those uncertainties.”</blockquote>
+          <blockquote>High-risk pregnancy feedback refers to calm communication and decisive clinical care.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2025-09-19">19 Sep 2025</time></div>
         </article>
         <article class="review-card">
           <div class="review-tags">Maternal &amp; Foetal Medicine · Pregnancy · Ultrasound</div>
-          <blockquote>“She was very clear in the information she was providing us &amp; gave us an open platform.”</blockquote>
+          <blockquote>Patients describe clear information and an open space to discuss their concerns.</blockquote>
           <div class="review-meta"><span>Verified patient</span><time datetime="2025-09-08">08 Sep 2025</time></div>
         </article>
       </div>
@@ -2383,38 +2891,38 @@
     <section id="blog" class="band">
       <div class="section-head">
         <div>
-          <p class="eyebrow">Obstetric articles</p>
+          <p class="eyebrow">Patient guides</p>
           <h2>Pregnancy guidance built around Dr Kotecha's areas of expertise.</h2>
         </div>
         <p>Article topics are obstetrics-only and map to complex antenatal care, twin pregnancy care, fetal medicine and birth planning.</p>
       </div>
       <div class="blog-grid">
-        <article class="post">
-          <img src="images/private-pregnancy-care.png" alt="Private pregnancy care illustration">
+        <a class="post" href="#private-obstetric-care" aria-label="Read about private pregnancy care in London">
+          <img src="images/private-pregnancy-care.png" alt="Private pregnancy care London guide">
           <div>
-            <time datetime="2026-06-01">Guide topic</time>
+            <time datetime="2026-06-01">Patient guide</time>
             <h3>What to expect from private pregnancy care in London</h3>
             <p>Explains antenatal appointments, screening, scan coordination and when consultant-led maternity care may be helpful.</p>
           </div>
-        </article>
-        <article class="post">
-          <img src="images/pregnancy-article-thumbnail.png" alt="Pregnancy article thumbnail">
+        </a>
+        <a class="post" href="#twin-pregnancy-care" aria-label="Read about twin pregnancy monitoring">
+          <img src="images/pregnancy-article-thumbnail.png" alt="Twin pregnancy care London guide">
           <div>
-            <time datetime="2026-06-15">Guide topic</time>
+            <time datetime="2026-06-15">Patient guide</time>
             <h3>Twin pregnancy monitoring: key milestones</h3>
             <p>Guidance on multiple birth surveillance, growth scans and birth planning for twin pregnancies.</p>
           </div>
-        </article>
-        <article class="post">
-          <img src="images/private-obstetric-video-thumbnail.jpg" alt="Private obstetric video thumbnail">
+        </a>
+        <a class="post" href="#fetal-medicine" aria-label="Read about fetal medicine and antenatal screening">
+          <img src="images/private-obstetric-video-thumbnail.jpg" alt="Fetal medicine and antenatal screening guide">
           <div>
-            <time datetime="2026-07-01">Guide topic</time>
+            <time datetime="2026-07-01">Patient guide</time>
             <h3>Understanding fetal medicine and antenatal screening</h3>
             <p>Explains NIPT, Down syndrome screening, fetal anomaly pathways and when specialist review may be recommended.</p>
           </div>
-        </article>
+        </a>
       </div>
-      <p class="schema-note">SEO note: convert each service and blog topic into its own URL when moving from this prototype into production.</p>
+      <p class="schema-note">Each guide topic can become a dedicated article as the education library develops.</p>
     </section>
 
     <section class="portland-trust" aria-label="The Portland Hospital maternity care">
@@ -2423,7 +2931,7 @@
           <p class="eyebrow">Delivering care at The Portland Hospital</p>
           <h2>Consultant-led private maternity care with hospital infrastructure around you.</h2>
         </div>
-        <p>Dr Reena Kotecha sees private maternity patients at The Portland Hospital, part of HCA Healthcare UK, where consultant-led care is supported by maternity teams, specialist services and neonatal expertise on site.</p>
+        <p>Dr Reena Kotecha sees private maternity patients at The Portland Hospital, part of HCA Healthcare UK, on Great Portland Street in central London, where consultant-led care is supported by maternity teams, specialist services and neonatal expertise on site.</p>
       </div>
       <div class="portland-grid">
         <article class="portland-card">
@@ -2467,13 +2975,91 @@
       </div>
     </section>
 
+    <section class="band" aria-label="Appointment practicalities">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Appointments</p>
+          <h2>Practical details before your first appointment.</h2>
+        </div>
+        <p>Clear preparation can make the first conversation more useful, especially if you are transferring care or seeking a second opinion.</p>
+      </div>
+      <div class="practical-grid">
+        <article class="practical-item">
+          <strong>Location</strong>
+          <h3>Where appointments take place</h3>
+          <p>Appointments are coordinated through ObGyn Matters, with care linked to The Portland Hospital, 212 Great Portland Street, London W1W 5QN.</p>
+        </article>
+        <article class="practical-item">
+          <strong>Format</strong>
+          <h3>Virtual appointments</h3>
+          <p>Ask the clinic team whether a virtual appointment is suitable for your first discussion or follow-up needs.</p>
+        </article>
+        <article class="practical-item">
+          <strong>Preparation</strong>
+          <h3>What to bring</h3>
+          <p>Bring your maternity notes, scan reports, screening results, medication list and any questions you would like to discuss.</p>
+        </article>
+        <article class="practical-item">
+          <strong>Support</strong>
+          <h3>Partners are welcome</h3>
+          <p>Partners are usually welcome to attend appointments, particularly where decisions about birth planning or ongoing care are being discussed.</p>
+        </article>
+        <article class="practical-item">
+          <strong>Timing</strong>
+          <h3>When to enquire</h3>
+          <p>You can enquire early in pregnancy, later in pregnancy or when a new concern arises and you would like consultant input.</p>
+        </article>
+        <article class="practical-item">
+          <strong>Response</strong>
+          <h3>After you contact the clinic</h3>
+          <p>The team will review your enquiry and contact you about the most appropriate appointment route.</p>
+        </article>
+      </div>
+    </section>
+
+    <section aria-label="Common patient questions">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">Common concerns</p>
+          <h2>Questions patients often ask before booking.</h2>
+        </div>
+        <p>These answers are general and do not replace personalised clinical advice. The right plan depends on your pregnancy, history and preferences.</p>
+      </div>
+      <div class="faq-grid">
+        <article class="faq-item">
+          <h3>Can I see Dr Kotecha if I am already booked elsewhere?</h3>
+          <p>Yes, you can enquire about a consultation even if you already have NHS or private maternity care in place.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I transfer care later in pregnancy?</h3>
+          <p>Later enquiries can be discussed with the clinic team. The options will depend on gestation, clinical details and appointment availability.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I discuss a planned C-section?</h3>
+          <p>Yes. You can discuss caesarean birth, vaginal birth, assisted birth and how those options relate to your pregnancy.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Do I need a referral?</h3>
+          <p>Many private maternity enquiries can be made directly. The clinic team can advise if any records or referral information would be helpful.</p>
+        </article>
+        <article class="faq-item">
+          <h3>Can I book with a high-risk pregnancy?</h3>
+          <p>You can enquire about complex antenatal care, previous complications, twin pregnancy, fetal medicine concerns or medical conditions in pregnancy.</p>
+        </article>
+        <article class="faq-item">
+          <h3>What if I am worried between appointments?</h3>
+          <p>The clinic can explain the appropriate contact route for non-urgent concerns and when to contact your maternity unit urgently.</p>
+        </article>
+      </div>
+    </section>
+
     <section id="contact">
       <div class="section-head">
         <div>
           <p class="eyebrow">Private enquiries</p>
-          <h2>Book a private obstetrician London enquiry.</h2>
+          <h2>Book a private obstetric enquiry.</h2>
         </div>
-        <p>Send a private obstetric enquiry for private pregnancy care, consultant-led maternity care, complex antenatal care, twin pregnancy support, fetal medicine, private C-section London planning or birth planning. Appointments are coordinated through ObGyn Matters.</p>
+        <p>Send a private obstetric enquiry for private pregnancy care, consultant-led maternity care, complex antenatal care, twin pregnancy support, fetal medicine, caesarean birth planning or birth planning. Appointments are coordinated through ObGyn Matters.</p>
       </div>
       <div class="contact-grid">
         <form id="ContactForm" method="post" action="https://www.obgynmatters.co.uk/contact#ContactForm" accept-charset="UTF-8">
@@ -2496,7 +3082,7 @@
               <option>Twin pregnancy care</option>
               <option>Fetal medicine</option>
               <option>Obstetric ultrasound or screening</option>
-              <option>Private C-section or birth planning</option>
+              <option>C-section or birth planning</option>
             </select>
           </label>
           <label>Comment
